@@ -110,3 +110,27 @@ print(x)
 # Just like \n which gives us a new line, we can use \t to get tab.
 
 print("What\tIs\tThis\tSorcery?\nWho\tThought\tYou\tThis?")
+
+# Just like f-strings, we also have r-strings. They are used for 
+# raw string notation. 
+
+FORMULA = r"What\this\help\wai+t?"
+print(FORMULA)
+
+#%%
+# Slots and format() method
+
+TEMPLATE = '{Hey} Jimmy, {How} are you {doing}?'
+
+TEMPLATE.format(Hey='Chitori',doing='What', How="Shit")
+
+
+# %%
+
+x = 'one = {1}; two = {0}'
+x.format('dos','uno')
+
+x = 'one = {uno}; two = {dos}'
+x.format(dos='dau',uno='un')
+x.format(uno='un',dos='dau')
+# %%
