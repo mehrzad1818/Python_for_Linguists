@@ -55,4 +55,31 @@ help(help)
 # %%
 # 1.6
 
+# We used the mathematical operator ** on page 3 above without explanation. 
+# Play around with it and say what it does. 
 
+print(3 ** 12)
+print(pow(3, 12))
+
+# Answer: Double stars show power operator.
+# One can also call pow() function to use it.
+
+# %%
+# 1.7
+
+# In math, 6 + 2 and 2 + 6 mean the same thing. 
+# We’ve seen that + and * can be used with strings too. 
+# What happens if arguments are reversed when strings are involved? 
+# Do those expressions mean the same thing?  
+
+print(6 + 2)
+print(2 + 6)
+print(4 * 8)
+print(8 * 4)
+
+# print(6 + "Stanza") # Error
+# print(2 + "5") # Error
+print(6 * "Stanza")
+print(type(2 * "5"))
+
+# %%
