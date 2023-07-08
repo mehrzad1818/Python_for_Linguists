@@ -134,3 +134,14 @@ x = 'one = {uno}; two = {dos}'
 x.format(dos='dau',uno='un')
 x.format(uno='un',dos='dau')
 # %%
+# Advanced format() method
+
+x = "What {:^18} Fuck"
+x.format("the")
+
+x = "What {:>13} Fuck"
+x.format("the")
+
+y = 4 * "This {0:<5} be a {1:^10} {2:>15} Unicorn."
+y.format("might", "large", "hairy")
+# %%
