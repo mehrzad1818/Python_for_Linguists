@@ -133,6 +133,7 @@ x.format('dos','uno')
 x = 'one = {uno}; two = {dos}'
 x.format(dos='dau',uno='un')
 x.format(uno='un',dos='dau')
+
 # %%
 # Advanced format() method
 
@@ -142,6 +143,50 @@ x.format("the")
 x = "What {:>13} Fuck"
 x.format("the")
 
-y = 4 * "This {0:<5} be a {1:^10} {2:>15} Unicorn."
+y = 4 * "This {2:<5} be a {1:^10} {0:>15} Unicorn."
 y.format("might", "large", "hairy")
+
+# %%
+# String Extraction (Slicing)
+
+names = "This is just a test."
+names[-1]
+names[len(names) - 1]
+
+names[2:20:2]
+
+
+# Thus x[n:n+1] is the same as x[n].
+# If we have x[n:m] where m < n+1, we end up with an empty string.
+# For example:
+x = 'abcde'
+x[2:2] # ''
+x[2:1] # ''
+
+# %%
+# Lists
+
+x = [1,6,4,9]
+y = ['stops','fricatives','glides']
+z = [7,'hats',56,'chairs',6.802]
+
+len(x)
+len(y)
+len(z)
+
+x[1]    # 6
+y[0]    # 'stops'
+z[3:]   # ['chairs',6.802]
+
+
+# .append() method adds an element to the end of a list
+x = ['rocks','paper']
+x.append('scissors')
+x
+
+# y = "Thisisjustthe beginning."
+# y.append("....")
+# y ---------> You can't append to string. As it is not subscriptable.
+
+
 # %%
