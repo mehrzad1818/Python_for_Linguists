@@ -5,7 +5,7 @@ your last name, the number of characters in that name,
 and then concatenate and print the two names (with a space).
 """
 
-#%%
+# %%
 # 1.1
 print("Mehrzad")
 print("Mehrzad Barzegar")
@@ -17,12 +17,16 @@ print(len("Mehrzad Barzegar"))
 print(len("Mehrzad" + "Barzegar"))
 print(len("Mehrzad" + " " + "Barzegar"))
 
-#%%
+# %%
 # 1.2
-print("Write a line of code that will calculate how many \
-       times the string ‘at’ occurs in this sentence.".count("at"))
+print(
+    "Write a line of code that will calculate how many \
+       times the string ‘at’ occurs in this sentence.".count(
+        "at"
+    )
+)
 
-#%%
+# %%
 # 1.3
 
 print("This is Mike.".lower().upper())
@@ -32,7 +36,7 @@ print("This is Mike.".upper().lower())
 # We can clearly see that the method on the rightest
 # most corner is applied to the string.
 
-#%%
+# %%
 # 1.4
 
 # Why does upper('This is a cat') not work?
@@ -40,7 +44,7 @@ print("This is Mike.".upper().lower())
 # Answer: Because instances of methods are different
 # from functions. They should come at the end of the argument.
 
-#%%
+# %%
 # 1.5
 
 # What does help(help) do in the interactive environment?
@@ -59,7 +63,7 @@ help(help)
 # We used the mathematical operator ** on page 3 above without explanation.
 # Play around with it and say what it does.
 
-print(3 ** 12)
+print(3**12)
 print(pow(3, 12))
 
 # Answer: Double stars show power operator.
@@ -91,7 +95,7 @@ print(type(2 * "5"))
 
 print(help(round))
 
-print(round( 45.2384923, 4))
+print(round(45.2384923, 4))
 print(round(43.251, 1))
 print(round(43.250, 1))
 
@@ -121,4 +125,4 @@ print(round(43.250, 1))
 
 # e: It's wrong, since assignment takes place on the right side of the equal sign.
 
-#%%
+# %%
