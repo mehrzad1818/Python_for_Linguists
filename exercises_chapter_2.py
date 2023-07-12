@@ -51,13 +51,13 @@ B = (not False) or True
 print(A, B)
 
 
-x = True
-y = False
-C = x and y
+X = True
+Y = False
+C = X and Y
 
 print(C)
 
-D = y or (not y)
+D = Y or (not Y)
 
 print(D)
 
@@ -95,16 +95,16 @@ isinstance(23, float)
 isinstance("What is this?", str)
 
 
-multi_line = """This is
+MULTI_LINE = """This is
 an example 
 of  multi-line string.
 """
 
-x = """This is
+X = """This is
 more than 
 one line"""
 
-print(x)
+print(X)
 
 # Just like \n which gives us a new line, we can use \t to get tab.
 
@@ -126,8 +126,8 @@ TEMPLATE.format(Hey="Chitori", doing="What", How="Shit")
 
 # %%
 
-x = "one = {1}; two = {0}"
-x.format("dos", "uno")
+X = "one = {1}; two = {0}"
+X.format("dos", "uno")
 
 X = "one = {uno}; two = {dos}"
 X.format(dos="dau", uno="un")
@@ -300,4 +300,4 @@ print(len(d))
 # WE can check whether specific key is in the dict,
 # notice we can't to this with value, only the key.
 
-"cat" in d
+print("cat" in d)
