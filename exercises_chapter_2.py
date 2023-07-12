@@ -111,8 +111,8 @@ print(x)
 
 print("What\tIs\tThis\tSorcery?\nWho\tThought\tYou\tThis?")
 
-# Just like f-strings, we also have r-strings. They are used for 
-# raw string notation. 
+# Just like f-strings, we also have r-strings. They are used for
+# raw string notation.
 
 FORMULA = r"What\this\help\wai+t?"
 print(FORMULA)
@@ -130,38 +130,37 @@ TEMPLATE.format(Hey='Chitori',doing='What', How="Shit")
 x = 'one = {1}; two = {0}'
 x.format('dos','uno')
 
-x = 'one = {uno}; two = {dos}'
-x.format(dos='dau',uno='un')
-x.format(uno='un',dos='dau')
+X = 'one = {uno}; two = {dos}'
+X.format(dos='dau',uno='un')
+X.format(uno='un',dos='dau')
 
 # %%
 # Advanced format() method
 
-x = "What {:^18} Fuck"
-x.format("the")
+X = "What {:^18} Fuck"
+X.format("the")
 
-x = "What {:>13} Fuck"
-x.format("the")
+X = "What {:>13} Fuck"
+X.format("the")
 
-y = 4 * "This {2:<5} be a {1:^10} {0:>15} Unicorn."
-y.format("might", "large", "hairy")
+Y = 4 * "This {2:<5} be a {1:^10} {0:>15} Unicorn."
+Y.format("might", "large", "hairy")
 
 # %%
 # String Extraction (Slicing)
 
-names = "This is just a test."
-names[-1]
-names[len(names) - 1]
-
-names[2:20:2]
+NAMES = "This is just a test."
+print(NAMES[-1])
+print(NAMES[len(NAMES) - 1])
+print(NAMES[2:20:2])
 
 
 # Thus x[n:n+1] is the same as x[n].
 # If we have x[n:m] where m < n+1, we end up with an empty string.
 # For example:
-x = 'abcde'
-x[2:2] # ''
-x[2:1] # ''
+X = 'abcde'
+print(X[2:2]) # ''
+print(X[2:1]) # ''
 
 # %%
 # Lists
@@ -174,22 +173,22 @@ len(x)
 len(y)
 len(z)
 
-x[1]    # 6
-y[0]    # 'stops'
-z[3:]   # ['chairs',6.802]
+print(x[1])    # 6
+print(y[0])    # 'stops'
+print(z[3:])   # ['chairs',6.802]
 
 
 # .append() method adds an element to the end of a list
 x = ['rocks','paper']
-x.append('scissors')
-x
+print(x.append('scissors'))
 
 # y = "Thisisjustthe beginning."
 # y.append("....")
 # y ---------> You can't append to string. As it is not subscriptable.
 
 
-# Next method is pop(). It takes index as input and removes the item, returning the value in the given index.
+# Next method is pop(). It takes index as input and removes the item,
+# returning the value in the given index.
 
 x = ['stops','fricatives','glides']
 x.pop(1)
@@ -209,24 +208,24 @@ print(x)
 # Note that sort() works only for a list of uniform objects that are, in fact, sortable.
 
 x = [5,2,8,3]
-x.sort()
-x
+print(x.sort())
+
 x = [5,2,8,3]
-x.reverse()
-x
+print(x.reverse())
+
 
 
 # in operator check whether something is in something else
 
-x = [5,2,8,3] 
-8 in x
-7 in x
+x = [5,2,8,3]
+print(8 in x)
+print(7 in x)
 
 
-x = "This is John Green. Welcome to another episode of Crash Course Literature."
-y = x.count("t")
-print(y)
-"come" in x
+X = "This is John Green. Welcome to another episode of Crash Course Literature."
+Y = X.count("t")
+print(Y)
+print("come" in x)
 
 
 # %%
@@ -249,13 +248,13 @@ z = (3,) # Tuple with one member
 
 y = (7,'hat',8.2)
 len(y)
-y[2]
+print(y[2])
 
 # The in operator applies to tuples, just as it does to lists:
 
 x = (5,2,8,3)
-8 in x
-7 in x
+print(8 in x)
+print(7 in x)
 
 # Finally, we can convert a list to a tuple with tuple(),
 # or a tuple to a list with list():
@@ -268,3 +267,27 @@ b = list(a)
 
 #%%
 # Dictionaries
+
+
+# sets of pairs
+# first element used to “look up” the second element
+# first element  must  be dintinct from the first elements of all the other pairs.
+# curly brackets within which each pair of elements is separated with a colon.
+
+# For example:
+
+d = {'cat':7,'chair':'hat','table':7}
+
+# dictionary = {key1:value1, key2:value2, key3:value3}
+
+# look up values by putting the key in square brackets
+# after the name of the dictionary
+
+
+d = {'cat':7,'chair':'hat','table':7}
+print(d['cat'])
+print(d['chair'])
+
+# len() is applicable to dicts, they return number of pairs.
+
+print(len(d))
