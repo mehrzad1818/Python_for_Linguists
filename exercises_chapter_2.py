@@ -188,5 +188,8 @@ x
 # y.append("....")
 # y ---------> You can't append to string. As it is not subscriptable.
 
+x = ['stops','fricatives','glides']
+x.pop(1)
+
 
 # %%
