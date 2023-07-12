@@ -188,8 +188,20 @@ x
 # y.append("....")
 # y ---------> You can't append to string. As it is not subscriptable.
 
+
+# Next method is pop(). It takes index as input and removes the item, returning the value in the given index.
+
 x = ['stops','fricatives','glides']
 x.pop(1)
 
+# The mirror method is insert(), it takes a value and an index, inserting it at the given value.
+
+x = ['stops','fricatives','glides']
+x.insert(1,'hello!')
+
+# range() is a function that produces values between the given input
+
+x = list(range(2000, 50, -2))
+print(x)
 
 # %%
