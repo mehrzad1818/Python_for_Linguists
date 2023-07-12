@@ -214,3 +214,57 @@ x
 x = [5,2,8,3]
 x.reverse()
 x
+
+
+# in operator check whether something is in something else
+
+x = [5,2,8,3] 
+8 in x
+7 in x
+
+
+x = "This is John Green. Welcome to another episode of Crash Course Literature."
+y = x.count("t")
+print(y)
+"come" in x
+
+
+# %%
+
+# Tuples
+
+# fixed sequence
+# similar to list
+# once created, cannot be changed (without modification)
+# members are seperated with commas
+
+# Some examples of tuples:
+
+x = () # Empty tuple
+y = (7,'hat',8.2) # Tuple with 3 members
+z = (3,) # Tuple with one member
+
+
+# The len() function applies to tuples, and you can index tuples just like lists.
+
+y = (7,'hat',8.2)
+len(y)
+y[2]
+
+# The in operator applies to tuples, just as it does to lists:
+
+x = (5,2,8,3)
+8 in x
+7 in x
+
+# Finally, we can convert a list to a tuple with tuple(),
+# or a tuple to a list with list():
+
+x = [1,2,3]
+y = tuple(x)
+
+a = (1,2,3)
+b = list(a)
+
+#%%
+# Dictionaries
