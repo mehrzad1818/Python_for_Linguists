@@ -51,7 +51,6 @@ B = (not False) or True
 print(A, B)
 
 
-
 x = True
 y = False
 C = x and y
@@ -63,7 +62,7 @@ D = y or (not y)
 print(D)
 
 
-#%%
+# %%
 
 # Comparison              Example
 
@@ -101,9 +100,9 @@ an example
 of  multi-line string.
 """
 
-x = '''This is
+x = """This is
 more than 
-one line'''
+one line"""
 
 print(x)
 
@@ -117,22 +116,22 @@ print("What\tIs\tThis\tSorcery?\nWho\tThought\tYou\tThis?")
 FORMULA = r"What\this\help\wai+t?"
 print(FORMULA)
 
-#%%
+# %%
 # Slots and format() method
 
-TEMPLATE = '{Hey} Jimmy, {How} are you {doing}?'
+TEMPLATE = "{Hey} Jimmy, {How} are you {doing}?"
 
-TEMPLATE.format(Hey='Chitori',doing='What', How="Shit")
+TEMPLATE.format(Hey="Chitori", doing="What", How="Shit")
 
 
 # %%
 
-x = 'one = {1}; two = {0}'
-x.format('dos','uno')
+x = "one = {1}; two = {0}"
+x.format("dos", "uno")
 
-X = 'one = {uno}; two = {dos}'
-X.format(dos='dau',uno='un')
-X.format(uno='un',dos='dau')
+X = "one = {uno}; two = {dos}"
+X.format(dos="dau", uno="un")
+X.format(uno="un", dos="dau")
 
 # %%
 # Advanced format() method
@@ -158,29 +157,29 @@ print(NAMES[2:20:2])
 # Thus x[n:n+1] is the same as x[n].
 # If we have x[n:m] where m < n+1, we end up with an empty string.
 # For example:
-X = 'abcde'
-print(X[2:2]) # ''
-print(X[2:1]) # ''
+X = "abcde"
+print(X[2:2])  # ''
+print(X[2:1])  # ''
 
 # %%
 # Lists
 
-x = [1,6,4,9]
-y = ['stops','fricatives','glides']
-z = [7,'hats',56,'chairs',6.802]
+x = [1, 6, 4, 9]
+y = ["stops", "fricatives", "glides"]
+z = [7, "hats", 56, "chairs", 6.802]
 
 len(x)
 len(y)
 len(z)
 
-print(x[1])    # 6
-print(y[0])    # 'stops'
-print(z[3:])   # ['chairs',6.802]
+print(x[1])  # 6
+print(y[0])  # 'stops'
+print(z[3:])  # ['chairs',6.802]
 
 
 # .append() method adds an element to the end of a list
-x = ['rocks','paper']
-print(x.append('scissors'))
+x = ["rocks", "paper"]
+print(x.append("scissors"))
 
 # y = "Thisisjustthe beginning."
 # y.append("....")
@@ -190,13 +189,13 @@ print(x.append('scissors'))
 # Next method is pop(). It takes index as input and removes the item,
 # returning the value in the given index.
 
-x = ['stops','fricatives','glides']
+x = ["stops", "fricatives", "glides"]
 x.pop(1)
 
 # The mirror method is insert(), it takes a value and an index, inserting it at the given value.
 
-x = ['stops','fricatives','glides']
-x.insert(1,'hello!')
+x = ["stops", "fricatives", "glides"]
+x.insert(1, "hello!")
 
 # range() is a function that produces values between the given input
 
@@ -207,17 +206,16 @@ print(x)
 # The first sorts a list, and the second reverses it.
 # Note that sort() works only for a list of uniform objects that are, in fact, sortable.
 
-x = [5,2,8,3]
+x = [5, 2, 8, 3]
 print(x.sort())
 
-x = [5,2,8,3]
+x = [5, 2, 8, 3]
 print(x.reverse())
-
 
 
 # in operator check whether something is in something else
 
-x = [5,2,8,3]
+x = [5, 2, 8, 3]
 print(8 in x)
 print(7 in x)
 
@@ -239,33 +237,33 @@ print("come" in x)
 
 # Some examples of tuples:
 
-x = () # Empty tuple
-y = (7,'hat',8.2) # Tuple with 3 members
-z = (3,) # Tuple with one member
+x = ()  # Empty tuple
+y = (7, "hat", 8.2)  # Tuple with 3 members
+z = (3,)  # Tuple with one member
 
 
 # The len() function applies to tuples, and you can index tuples just like lists.
 
-y = (7,'hat',8.2)
+y = (7, "hat", 8.2)
 len(y)
 print(y[2])
 
 # The in operator applies to tuples, just as it does to lists:
 
-x = (5,2,8,3)
+x = (5, 2, 8, 3)
 print(8 in x)
 print(7 in x)
 
 # Finally, we can convert a list to a tuple with tuple(),
 # or a tuple to a list with list():
 
-x = [1,2,3]
+x = [1, 2, 3]
 y = tuple(x)
 
-a = (1,2,3)
+a = (1, 2, 3)
 b = list(a)
 
-#%%
+# %%
 # Dictionaries
 
 
@@ -276,7 +274,7 @@ b = list(a)
 
 # For example:
 
-d = {'cat':7,'chair':'hat','table':7}
+d = {"cat": 7, "chair": "hat", "table": 7}
 
 # dictionary = {key1:value1, key2:value2, key3:value3}
 
@@ -284,10 +282,22 @@ d = {'cat':7,'chair':'hat','table':7}
 # after the name of the dictionary
 
 
-d = {'cat':7,'chair':'hat','table':7}
-print(d['cat'])
-print(d['chair'])
+d = {"cat": 7, "chair": "hat", "table": 7}
+print(d["cat"])
+print(d["chair"])
 
 # len() is applicable to dicts, they return number of pairs.
 
 print(len(d))
+
+
+d = {"cat": 7, "chair": "hat", "table": 7}
+d["onion"] = 3.7
+print(d)
+print(len(d))
+
+
+# WE can check whether specific key is in the dict,
+# notice we can't to this with value, only the key.
+
+"cat" in d
