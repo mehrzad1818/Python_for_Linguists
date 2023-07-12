@@ -204,4 +204,13 @@ x.insert(1,'hello!')
 x = list(range(2000, 50, -2))
 print(x)
 
-# %%
+# We also have the sort() and reverse() methods.
+# The first sorts a list, and the second reverses it.
+# Note that sort() works only for a list of uniform objects that are, in fact, sortable.
+
+x = [5,2,8,3]
+x.sort()
+x
+x = [5,2,8,3]
+x.reverse()
+x
