@@ -378,3 +378,23 @@ Y = False
 # Tuples and Strings are not mutable.
 # We can't directly modify them.
 # Assigning a new value to the same object is not considered mutability.
+
+X = "a first string"
+X = "another string"
+
+
+# Methods for mutable and immutable elements differ.
+# It depends on their output, whether they alter, or doesn't use object.
+
+# For example, reverse() method changes the list elements in its place:
+
+X = [1, 3, 5, 7, 9]
+X.reverse()
+print(X)  # the output would be the reversed list.
+
+# upper() string method, returns a new value with all capital letters:
+
+Y = "this message is in all smalls."
+Y.upper()
+print(Y)  # the output is still in all smalls.
+
