@@ -522,3 +522,24 @@ valulist_FN_EN_VowelHarmony = list(FN_EN_VowelHarmony.values())
 for number in range(0, len(keylist_FN_EN_VowelHarmony)):
     JJJ = f"{keylist_FN_EN_VowelHarmony[number]:<15} {valulist_FN_EN_VowelHarmony[number][0]:<15} {valulist_FN_EN_VowelHarmony[number][1]}"
     print(JJJ)
+
+# %%
+# 2.10
+
+# You can use the dictionary data type in conjunction with the format()
+# command to do translations between two languages.
+# Choose two languages, construct a small dictionary for them, then create
+# some strings with which you can use your dictionary to do translations.
+
+FR_EN_dict = {
+    "hello": "bonjour",
+    "goodbye": "au revoir",
+    "yes": "oui",
+    "no": "non",
+    "right": "droit",
+    "left": "gauche",
+    "one": "un",
+    "two": "deux",
+    "three": "trois",
+}
+
