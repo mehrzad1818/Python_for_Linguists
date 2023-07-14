@@ -496,12 +496,29 @@ for number in range(0, len(keylist_KTB)):
     XXX = f"{keylist_KTB[number]:<25} {valulist_KTB[number]}"
     print(XXX)
 
+# %%
+# 2.9
 
-# X = "What {:^18} Fuck"
-# X.format("the")
+# We can also use format() to treat vowel harmony.
+# Choose a simple vowel harmony system and show how this might work
 
-# X = "What {:>13} Fuck"
-# X.format("the")
 
-# Y = 4 * "This {2:<5} be a {1:^10} {0:>15} Unicorn."
-# Y.format("might", "large", "hairy")
+FN_EN_VowelHarmony = {
+
+    "table": ["poyta-na", "essive"],
+    "fine wine": ["pouta-na", "essive"],
+    "home": ["koti-na", "essive"],
+
+    "hand": ["kade-lla", "adessive"],
+    "tame": ["kesy-lla", "adessive"],
+    "tax": ["vero-lla", "adessive"],
+
+}
+
+
+keylist_FN_EN_VowelHarmony = list(FN_EN_VowelHarmony.keys())
+valulist_FN_EN_VowelHarmony = list(FN_EN_VowelHarmony.values())
+
+for number in range(0, len(keylist_FN_EN_VowelHarmony)):
+    JJJ = f"{keylist_FN_EN_VowelHarmony[number]:<15} {valulist_FN_EN_VowelHarmony[number][0]:<15} {valulist_FN_EN_VowelHarmony[number][1]}"
+    print(JJJ)
