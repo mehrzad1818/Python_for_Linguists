@@ -398,3 +398,110 @@ Y = "this message is in all smalls."
 Y.upper()
 print(Y)  # the output is still in all smalls.
 
+# %%
+# Exercises
+
+# 2.1
+
+isinstance(bool is not bool, bool)
+# isinstace(the object, the type) is used to check the
+# equality of elements. The output is true.
+# cause the output of first argument is bool, which is equal to bool.
+
+# %%
+# 2.2
+
+A = 3 == 3
+# """in snippet above, we have assigned a boolean value (3 == 3) to a"""
+
+A == 3 = 3
+
+# """This could results in an error because of two problems:
+# 1. A doesn't have any value. we are assigning prior to giving value.
+# 2. True cannot be assigned. Logically impossible and
+#    virtually reserved keyword."""
+
+# %%
+# 2.3
+
+M = 37
+N = 4
+print(M * N)
+
+# %%
+# 2.4
+
+N = "transformational"
+C = "grammar"
+print(N + " " + C)
+
+# %%
+# 2.5
+
+# We've made a two variables which have literal meaning of the opposite.
+# It's not a good idea to trick your mind.
+yes = 'no'
+no = 'yes'
+
+# %%
+# 2.6
+
+print(7 ** 3 > 15 * 16)
+
+# %%
+# 2.7
+
+X = "abc"
+X.upper()
+print(X)
+
+# X is immutable here, but the point is that the return value
+# is not the same value.
+
+# %%
+# 2.8
+
+"""
+Semitic morphology involves intercalating vowels and consonants to express
+morphological categories. For example, the Arabic root k,t,b occurs in the
+following forms:
+
+katab-a     ‘he wrote’
+kaatab-a    ‘he corresponded’
+kutib-a     ‘it was written’
+kitab       ‘book’
+kuttaab     ‘writers’
+uktub       ‘write!’
+
+How might you use format() to describe this system? Give a sample
+representation for the root k,t,b and show how format() could be used to
+express different categories.
+
+"""
+
+KTB = {
+    "katab-a": "he wrote",
+    "kaateb-a": "he corresponded",
+    "kutib-a": "it was written",
+    "kitab": "book",
+    "kuttaab": "writers",
+    "uktub": "write!",
+}
+
+
+keylist_KTB = list(KTB.keys())
+valulist_KTB = list(KTB.values())
+
+for number in range(0, len(keylist_KTB)):
+    XXX = f"{keylist_KTB[number]:<25} {valulist_KTB[number]}"
+    print(XXX)
+
+
+# X = "What {:^18} Fuck"
+# X.format("the")
+
+# X = "What {:>13} Fuck"
+# X.format("the")
+
+# Y = 4 * "This {2:<5} be a {1:^10} {0:>15} Unicorn."
+# Y.format("might", "large", "hairy")
