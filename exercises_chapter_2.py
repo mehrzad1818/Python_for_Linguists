@@ -543,3 +543,24 @@ FR_EN_dict = {
     "three": "trois",
 }
 
+FR_EN_dict.__format__()
+
+            # X = "one = {1}; two = {0}"
+            # X.format("dos", "uno")
+
+            # X = "one = {uno}; two = {dos}"
+            # X.format(dos="dau", uno="un")
+            # X.format(uno="un", dos="dau")
+
+# %%
+# 2.11
+
+# strings and lists are different in mutability.
+# While we can directly change values in lists, it's not the case with strings.
+
+# %%
+# 2.12
+
+# Web: Snoop around on the web and figure out how the set data type works.
+# Explain and exemplify.
+
