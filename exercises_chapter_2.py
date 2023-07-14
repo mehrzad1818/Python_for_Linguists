@@ -96,13 +96,15 @@ isinstance("What is this?", str)
 
 
 MULTI_LINE = """This is
-an example 
+an example
 of  multi-line string.
 """
 
-X = """This is
-more than 
-one line"""
+X = """
+This is
+more than
+one line
+"""
 
 print(X)
 
@@ -121,7 +123,7 @@ print(FORMULA)
 
 TEMPLATE = "{Hey} Jimmy, {How} are you {doing}?"
 
-TEMPLATE.format(Hey="Chitori", doing="What", How="Shit")
+TEMPLATE.format(Hey="Woozy", doing="What", How="Shit")
 
 
 # %%
@@ -192,7 +194,8 @@ print(x.append("scissors"))
 x = ["stops", "fricatives", "glides"]
 x.pop(1)
 
-# The mirror method is insert(), it takes a value and an index, inserting it at the given value.
+# The mirror method is insert(), it takes a value and an index,
+# inserting it at the given value.
 
 x = ["stops", "fricatives", "glides"]
 x.insert(1, "hello!")
@@ -204,7 +207,7 @@ print(x)
 
 # We also have the sort() and reverse() methods.
 # The first sorts a list, and the second reverses it.
-# Note that sort() works only for a list of uniform objects that are, in fact, sortable.
+# Note that sort() works only for a list of uniform objects that are sortable.
 
 x = [5, 2, 8, 3]
 print(x.sort())
@@ -220,7 +223,7 @@ print(8 in x)
 print(7 in x)
 
 
-X = "This is John Green. Welcome to another episode of Crash Course Literature."
+X = "This is John Green. Welcome to this episode of Crash Course Literature."
 Y = X.count("t")
 print(Y)
 print("come" in x)
@@ -233,7 +236,7 @@ print("come" in x)
 # fixed sequence
 # similar to list
 # once created, cannot be changed (without modification)
-# members are seperated with commas
+# members are separated with commas
 
 # Some examples of tuples:
 
@@ -242,7 +245,8 @@ y = (7, "hat", 8.2)  # Tuple with 3 members
 z = (3,)  # Tuple with one member
 
 
-# The len() function applies to tuples, and you can index tuples just like lists.
+# The len() function applies to tuples,
+# and you can index tuples just like lists.
 
 y = (7, "hat", 8.2)
 len(y)
@@ -269,7 +273,8 @@ b = list(a)
 
 # sets of pairs
 # first element used to “look up” the second element
-# first element  must  be dintinct from the first elements of all the other pairs.
+# first element  must  be distinct from the
+# first elements of all the other pairs.
 # curly brackets within which each pair of elements is separated with a colon.
 
 # For example:
@@ -301,3 +306,75 @@ print(len(d))
 # notice we can't to this with value, only the key.
 
 print("cat" in d)
+
+
+# Dictionary items can be altered or deleted.
+d = {"cat": 7, "chair": "hat", "table": 7}
+d["cat"] = d["cat"] + 2
+print(d["cat"])
+del d["cat"]
+
+
+# Keys, values, or key-value pairs can be extracted:
+
+d = {"cat": 7, "chair": "hat", "table": 7}
+
+# the type of output of these file are unique:
+
+print(type(d.keys()))
+print(type(d.values()))
+print(type(d.items()))
+
+print(d.keys())  # We access keys (unique, first)
+print(d.values())  # We access value (not unique, second ...)
+print(d.items())  # Both keys and value (unique)
+
+# Use format() with dictionaries.
+
+# special operator for this **
+# basic idea is that the slots in the
+# string are named. The values that go
+# in those slots are associated with the relevant keys of the dictionary
+
+D = {"uno": "eins", "dos": "zwei", "tres": "drei"}
+S = "one = {uno} and three = {tres}"
+S.format(**d)
+
+# %%
+# Mutability
+
+d = {"un": "un", "deux": "?", "trois": "tri"}
+d["quatre"] = "pedwar"
+d["deux"] = "dau"
+
+# Garbage Collection
+
+# This concept revolves around removing un-necessary information in the memory.
+# When we assign i = 8 and then, i = 12, the value of i is 12, not 8.
+# Mutable elements, such as dictionaries and lists can be directly changed.
+
+x = ["Tom", "Dick", "Harry"]
+x[1] = "Mary"  # Inserts "Mary" with whatever is at index 1, which is "Dick".
+
+x.append("Edna")  # append() adds Edna to the end of the list.
+
+
+# Dictionaries are mutable, too.
+
+d = {"un": "un", "deux": "?", "trois": "tri"}
+d["quatre"] = "pedwar"  # Adds a new key-value to the dict
+d["deux"] = "dau"  # Finds the key deux, and assigns value dau to it.
+
+
+X = 3
+X = 7
+# the output would be 7
+# (mutability and garbage collection are intertwined somehow.)
+
+Y = True
+Y = False
+# Again, output would be False, not True.
+
+# Tuples and Strings are not mutable.
+# We can't directly modify them.
+# Assigning a new value to the same object is not considered mutability.
