@@ -564,3 +564,12 @@ FR_EN_dict.__format__()
 # Web: Snoop around on the web and figure out how the set data type works.
 # Explain and exemplify.
 
+my_set = {"apple", "banana", "cherry"}
+
+# sets are 1. Unordered 2. Unchangeable 3. No Duplicates allowed.
+
+set1 = {"apple", "banana", "cherry"}
+set2 = {1, 5, 7, 9, 3}
+set3 = {True, False, False}
+
+##########################
