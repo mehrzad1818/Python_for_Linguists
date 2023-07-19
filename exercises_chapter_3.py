@@ -45,4 +45,26 @@ if 2 + 2 == 5:
 else:
     print('but this will')
     print('...and so will this')
+# %%
 
+# Using pass in if block
+# We can use pass to have an empty conditional expression.
+
+x = 'hat'
+if x[0] == 'h':
+    pass
+else:
+    print('doing something here....')
+
+
+# %%
+# Advanced Printing
+
+print("This is to test the print built-in function.")
+
+print("This is the first file.", "This is the second file.",
+      "This is the third file.", "", sep = "333")
+
+
+
+# %%
