@@ -62,9 +62,26 @@ else:
 
 print("This is to test the print built-in function.")
 
+# print function takes arguments: you can use sep to separate strings with the given argument.
+# or you can use end to put something at the end of the print function.
 print("This is the first file.", "This is the second file.",
-      "This is the third file.", "", sep = "333")
+      "This is the third file.", sep="333", end="13242")
 
+print('one', 'two', 'three', sep='-')
 
+print('one', 'two', 'three', sep='')
 
 # %%
+
+# for control structure
+
+the_list = [232, 1221, 12123, 1212, 3, 23, 123, 12, 312, 3]
+for names in the_list:
+    print(names)
+
+# we don't need to use each values held by the 'names' here:
+
+numbers = [23, 123, 123, 123, 123, 123, 123, 3, 4, 5345, 34, 34, 534]
+
+for num in numbers:
+    print(f"Hey{'':>10}, This is the number: {num:>13}")
