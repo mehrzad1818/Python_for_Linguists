@@ -27,3 +27,13 @@ if isinstance(23, int):
     print("I'm sure it's a number.")
     print("Come on, dude!")
 # %%
+# control 6 and 7 .py
+if 2 + 2 == 5:  # 2-statement block
+    print("that shouldn't happen")
+    print('or this....')
+if 2 + 2 == 5:  # 1-statement block
+    print("that shouldn't happen")
+print('or this....')
+
+
+# %%
