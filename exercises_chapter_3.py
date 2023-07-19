@@ -37,3 +37,12 @@ print('or this....')
 
 
 # %%
+
+# if and else clause:
+
+if 2 + 2 == 5:
+    print("this won't print")
+else:
+    print('but this will')
+    print('...and so will this')
+
