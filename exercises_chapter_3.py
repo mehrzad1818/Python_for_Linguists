@@ -116,4 +116,29 @@ for number in range(0, 101):
     variable += number
 print(variable)
 
+# %%
+# for, range, and recursion mixed:
+
+words = ["feminism", "communism", "socialism", "capitalism"]
+
+for word in words:
+    print(word)
+    for number in range(4):
+        word = "anti-" + word
+        print(word)
+
+
+
+# %%
+
+# define prefix and 3 words
+
+prefix = 'anti'
+words = ['missile', 'racism', 'music']
+
+for word in words:
+    print(word)
+    for i in range(3):
+        word = prefix + '-' + word
+        print(word)
 
