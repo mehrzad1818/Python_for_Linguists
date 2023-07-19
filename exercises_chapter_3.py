@@ -85,3 +85,35 @@ numbers = [23, 123, 123, 123, 123, 123, 123, 3, 4, 5345, 34, 34, 534]
 
 for num in numbers:
     print(f"Hey{'':>10}, This is the number: {num:>13}")
+
+
+# nothing prevents us from using the variable more than once per each iteration.
+
+for i in [1, 2, 3]:
+    print('{} + 2 = {}'.format(i, i+2))
+
+
+
+num1 = [12, 23, 234, 354524]
+num2 = 123
+
+for x in num1:
+    print(f"{x:>12} + 123 = {x + num2}")
+
+
+# we can use "for" to iterate over strings, too.
+
+for i in 'tone':
+    print(i, end=' + ')
+
+
+
+# we can combine for and range to count and iterate over a list of numbers:
+
+variable = 0
+
+for number in range(0, 101):
+    variable += number
+print(variable)
+
+
