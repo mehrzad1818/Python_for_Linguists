@@ -142,3 +142,43 @@ for word in words:
         word = prefix + '-' + word
         print(word)
 
+# %%
+
+total = 0
+for number in range(10001):
+    total += number
+print(total)
+
+# %%
+
+# Write a code to count vowels in a string.
+
+
+vowels = "aeiou"
+
+sentence = """
+This is an example of a sentence that
+we are going to test how
+many vowels does it have
+"""
+
+vowelcount = 0
+
+for letter in sentence:
+    if letter in vowels:
+        vowelcount += 1
+print(vowelcount)
+
+####
+
+
+vowels = 'aeiou'
+letterCount = 0
+word = 'Appalachicola'
+
+if word[0].lower() in vowels:
+    for letter in word:
+        letterCount += 1
+else:
+    print('Not vowel-initial')
+print(letterCount)
