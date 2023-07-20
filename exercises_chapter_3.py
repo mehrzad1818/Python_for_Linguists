@@ -182,3 +182,25 @@ if word[0].lower() in vowels:
 else:
     print('Not vowel-initial')
 print(letterCount)
+
+# %%
+# while loop
+
+
+y = 12
+x = 13
+
+while x == y:
+    print("We're good.")
+
+
+# same program with while and for:
+
+count = 0
+while count < 5:
+    count += 1
+    print(count)
+
+for number in range(1, 6):
+    print(number)
+
