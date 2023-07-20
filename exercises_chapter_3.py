@@ -16,8 +16,8 @@ if 2 + 2 == 4:
 
 # The code below produces error, since it's not indented.
 
-if 3 - 1 > -3:
-print("You are right.")
+# if 3 - 1 > -3:
+# print("You are right.")
 
 # %%
 # control3.py
@@ -203,4 +203,67 @@ while count < 5:
 
 for number in range(1, 6):
     print(number)
+
+# %%
+# two while loops nested
+
+word = 'accumulation'
+count = 0
+
+while count < len(word):
+    print(word[count])
+    count += 1
+    other_count = 1
+
+    while other_count < count + 1:
+        print('\t', word[0: other_count])
+        other_count += 1
+
+
+# %%
+# if and while nested
+# This program checks a word against a list.
+# The output is the letters that weren't in the list.
+
+word = 'alphabet'
+vowels = 'aeiou'
+count = 0
+
+while count < len(word):
+    letter = word[count]
+    if letter not in vowels:
+        print(letter)
+    count += 1
+
+# %%
+
+# While loop to for loop and vice versa.
+
+for i in [1, 2, 3]:
+    print(i)
+
+for i in [1, 2, 3]:
+    print(i)
+
+
+number = 1
+while number < 4:
+    print(number)
+    number += 1
+
+# %%
+# While loop has an else controller.
+
+vowels = "aioue"
+word = "thisiswhatithinkabout"
+
+counter = 0
+vowel_counter = 0
+
+while counter < len(word):
+    if word[counter] in vowels:
+        vowel_counter += 1
+    counter += 1
+else:
+    print(f"There are {vowel_counter} vowels in this word.")
 
