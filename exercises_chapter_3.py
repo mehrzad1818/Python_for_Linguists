@@ -386,3 +386,14 @@ def mus(*numbers):
 
 
 print(mus(12, 42, 32, 1, 1, 3))
+
+
+"""This is a playground to test my codes."""
+
+
+def save_user(**user):
+    """Saves the info inside a dictionary."""
+    print(user)
+
+
+save_user(id=(1, 2, 3, 4), name=("John", "James", "Jane", "Joan"), age=(18, 22, 17, 16))
