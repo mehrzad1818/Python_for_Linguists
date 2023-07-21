@@ -397,3 +397,59 @@ def save_user(**user):
 
 
 save_user(id=(1, 2, 3, 4), name=("John", "James", "Jane", "Joan"), age=(18, 22, 17, 16))
+
+
+"""This is a playground to test my codes."""
+
+
+# These are instance of local scop
+def greet(name):
+    """Greets people."""
+    message = "a"
+    print(message, name)
+
+
+# # Here, the scope of message is global.
+message = "b"
+
+
+def send_email(name):
+    """Sends an email."""
+    global message
+    message == 1
+    print(message, name)
+
+
+# You can use global keyword to define and modify a variable, but the problem
+# is that it will cause bugs and errors most of the time.
+
+
+def multiply(*numbers):
+    """It multiplies."""
+    total = 1
+    for number in numbers:
+        total *= number
+    return total
+
+
+print("Start")
+print(multiply(1, 6, 345, 34, 523, 467, 56, 3, 35, 34, 34))
+
+
+def fizz_buzz(your_guess):
+    """Plays the game."""
+
+    if (your_guess % 5 == 0) and (your_guess % 3 == 0):
+        return "FizzFuzz"
+
+    elif your_guess % 5 == 0:
+        return "Fuzz"
+
+    elif your_guess % 3 == 0:
+        return "Fizz"
+
+    else:
+        return your_guess
+
+
+print(fizz_buzz(int(input("What's your number?"))))
