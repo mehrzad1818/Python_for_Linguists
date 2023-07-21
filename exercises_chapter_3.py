@@ -1,4 +1,4 @@
-# Control Structures
+"""Control Structures"""
 
 # if is the first control structure we're going to learn,
 # it's basically used for conditional application,
@@ -30,10 +30,10 @@ if isinstance(23, int):
 # control 6 and 7 .py
 if 2 + 2 == 5:  # 2-statement block
     print("that shouldn't happen")
-    print('or this....')
+    print("or this....")
 if 2 + 2 == 5:  # 1-statement block
     print("that shouldn't happen")
-print('or this....')
+print("or this....")
 
 
 # %%
@@ -43,18 +43,18 @@ print('or this....')
 if 2 + 2 == 5:
     print("this won't print")
 else:
-    print('but this will')
-    print('...and so will this')
+    print("but this will")
+    print("...and so will this")
 # %%
 
 # Using pass in if block
 # We can use pass to have an empty conditional expression.
 
-x = 'hat'
-if x[0] == 'h':
+x = "hat"
+if x[0] == "h":
     pass
 else:
-    print('doing something here....')
+    print("doing something here....")
 
 
 # %%
@@ -64,12 +64,17 @@ print("This is to test the print built-in function.")
 
 # print function takes arguments: you can use sep to separate strings with the given argument.
 # or you can use end to put something at the end of the print function.
-print("This is the first file.", "This is the second file.",
-      "This is the third file.", sep="333", end="13242")
+print(
+    "This is the first file.",
+    "This is the second file.",
+    "This is the third file.",
+    sep="333",
+    end="13242",
+)
 
-print('one', 'two', 'three', sep='-')
+print("one", "two", "three", sep="-")
 
-print('one', 'two', 'three', sep='')
+print("one", "two", "three", sep="")
 
 # %%
 
@@ -90,8 +95,7 @@ for num in numbers:
 # nothing prevents us from using the variable more than once per each iteration.
 
 for i in [1, 2, 3]:
-    print('{} + 2 = {}'.format(i, i+2))
-
+    print("{} + 2 = {}".format(i, i + 2))
 
 
 num1 = [12, 23, 234, 354524]
@@ -103,9 +107,8 @@ for x in num1:
 
 # we can use "for" to iterate over strings, too.
 
-for i in 'tone':
-    print(i, end=' + ')
-
+for i in "tone":
+    print(i, end=" + ")
 
 
 # we can combine for and range to count and iterate over a list of numbers:
@@ -128,18 +131,17 @@ for word in words:
         print(word)
 
 
-
 # %%
 
 # define prefix and 3 words
 
-prefix = 'anti'
-words = ['missile', 'racism', 'music']
+prefix = "anti"
+words = ["missile", "racism", "music"]
 
 for word in words:
     print(word)
     for i in range(3):
-        word = prefix + '-' + word
+        word = prefix + "-" + word
         print(word)
 
 # %%
@@ -172,15 +174,15 @@ print(vowelcount)
 ####
 
 
-vowels = 'aeiou'
+vowels = "aeiou"
 letterCount = 0
-word = 'Appalachicola'
+word = "Appalachicola"
 
 if word[0].lower() in vowels:
     for letter in word:
         letterCount += 1
 else:
-    print('Not vowel-initial')
+    print("Not vowel-initial")
 print(letterCount)
 
 # %%
@@ -207,7 +209,7 @@ for number in range(1, 6):
 # %%
 # two while loops nested
 
-word = 'accumulation'
+word = "accumulation"
 count = 0
 
 while count < len(word):
@@ -216,7 +218,7 @@ while count < len(word):
     other_count = 1
 
     while other_count < count + 1:
-        print('\t', word[0: other_count])
+        print("\t", word[0:other_count])
         other_count += 1
 
 
@@ -225,8 +227,8 @@ while count < len(word):
 # This program checks a word against a list.
 # The output is the letters that weren't in the list.
 
-word = 'alphabet'
-vowels = 'aeiou'
+word = "alphabet"
+vowels = "aeiou"
 count = 0
 
 while count < len(word):
@@ -267,3 +269,120 @@ while counter < len(word):
 else:
     print(f"There are {vowel_counter} vowels in this word.")
 
+# %%
+
+# Break and Continue in While and If loop:
+
+word = "sthenic"
+vowels = "aeiou"
+counter = 0
+
+while counter < len(word):
+    if word[counter] in vowels:
+        break
+    counter += 1
+
+print("The word begins with", counter, "consonant letters")
+
+word = "sthenic"
+vowels = "aeiou"
+counter = 0
+
+for letter in word:
+    if letter in vowels:
+        break
+    counter += 1
+
+print("The word begins with", counter, "consonant letters")
+
+# %%
+"""This is a playground to test my codes."""
+
+COMMAND = ""
+
+while COMMAND.lower() != "quit":
+    COMMAND = input("> ")
+    print("ECHO", COMMAND)
+
+while True:
+    COMMAND = input("> ")
+    print("ECHO", COMMAND)
+    if COMMAND.lower() == "quit":
+        break
+
+
+count = 0
+start = int(input("What is your starting number?\n"))
+end = int(input("What is your finishing number?\n"))
+
+for number in range(start, end):
+    if (number % 2) == 0:
+        print(number)
+        count += 1
+print(f"You have {count} even numbers.")
+
+
+"""This is a playground to test my codes."""
+
+
+# We have two types of functions: 1. Performs a task
+def greeting(first_name, last_name):
+    """Welcomes the people."""
+    print(f"Hi {first_name} {last_name}.")
+    print("How are you today?")
+
+
+name = input(f"What's your name?\n{'':<2}").title()
+last = input(f"What's your last name?\n{'':<2}").title()
+
+greeting(name, last)
+
+
+# We have two types of functions: 2. Returns a value
+def greeting_2(first_name):
+    """It welcomes people, but more efficiently."""
+    return f"Hi, {first_name}."
+
+
+print(greeting_2(first_name="Mick"))
+
+
+def increment(number, by_degree=3):
+    """Adds two values together."""
+    return number + by_degree
+
+
+print(increment(2))
+
+
+"""This is a playground to test my codes."""
+
+
+# def increment(number, another, by_degree=3):
+#     """Adds two values together."""
+#     return number + by_degree + another
+
+
+# print(increment(23, by_degree=12, another=62))
+
+
+def multiply(*numbers):
+    """Multiplies given numbers."""
+    total = 1
+    for number in numbers:
+        total *= number
+    return f"The total is: {total}"
+
+
+print(multiply(12, 42, 32, 1, 1, 3))
+
+
+def mus(*numbers):
+    """Sums given numbers."""
+    total = 0
+    for number in numbers:
+        total += number
+    return f"The total is: {total}"
+
+
+print(mus(12, 42, 32, 1, 1, 3))
