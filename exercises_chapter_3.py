@@ -399,9 +399,6 @@ def save_user(**user):
 save_user(id=(1, 2, 3, 4), name=("John", "James", "Jane", "Joan"), age=(18, 22, 17, 16))
 
 
-"""This is a playground to test my codes."""
-
-
 # These are instance of local scop
 def greet(name):
     """Greets people."""
