@@ -450,3 +450,119 @@ def fizz_buzz(your_guess):
 
 
 print(fizz_buzz(int(input("What's your number?"))))
+
+
+# %%
+# try exception (error management)
+
+
+lst = [1, 2.2, 3, True, "Hello", [1, 2], (1, 43), 234, 4635]
+
+for i in lst:
+    try:
+        print(i**2)
+    except:
+        pass
+
+
+while True:
+    try:
+        number = int(input("Enter a number: "))
+        print(number**2)
+        break
+    except:
+        print("Enter a valid number. (No extra characters)")
+
+# %%
+
+vowels = "aeiou"  # define vowels
+word = "sthenic"  # define word
+counter = 0  # initialize counter
+# go through all letters
+for i in range(len(word)):
+    # is current letter a vowel?
+    if word[i] in vowels:
+        break  # if so, exit loop
+    # don't forget to update counter
+    counter += 1
+# print result
+print("The word begins with", counter, "consonant letters")
+
+# %%
+
+
+vowels = "aeiou"
+word = "shgftheegtfnic"
+counter = 0
+for i, letter in enumerate(word):
+    if letter not in vowels:
+        counter += 1
+print("The word begins with", counter, "consonant letters")
+
+# %%
+
+
+vowels = "aeiou"  # define vowels
+word = "sthenic"  # define word
+counter = 0  # initialize counter
+# go through each letter
+for i in range(len(word)):
+    # is current letter a vowel?
+    if word[i] in vowels:
+        continue  # if so, skip it
+    # increment counter (only for non-vowels!)
+    counter += 1
+# print result
+print("The word has", counter, "consonant letters")
+
+# %%
+
+
+# CV Monosyllabic generator
+
+
+vowels = "aiu"  # define vowels
+consonants = "ptk"  # define consonants
+
+for consonant in enumerate(consonants):
+    for vowel in enumerate(vowels):
+        CV = consonant + vowel
+        print(consonant, vowel, sep="")
+
+# %%
+
+
+vowels = "aiu"
+consonants = "ptk"
+
+for v in vowels:
+    for c in consonants:
+        print(c, v, sep="")
+
+# %%
+# With more words, it becomes more relevant.
+
+vowels = "aeiou"
+consonants = "ptkbdg"
+
+for v in vowels:
+    for c in consonants:
+        print(c, v, sep="")
+
+# %%
+
+# CVC syllables
+
+vowels = "aeiou"
+consonants = "ptkbdg"
+add = 0
+
+for v in vowels:
+    for o in consonants:
+        for c in consonants:
+            print(o, v, c, sep="")
+            add += 1
+print(add)
+
+
+# %%
