@@ -934,3 +934,123 @@ print("unique items in each set:", first ^ second)
 
 
 # %%
+
+# Dictionary
+
+
+point = {"x": 1, "y": 2}
+
+point = dict(w=34, x=12, y=61, z=1)
+print(point)
+
+
+point["x"] = 10
+point["z"] = 20
+
+if "a" in point:
+    print(point["a"])
+
+print(point.get("a", 0))
+del point["x"]
+
+print(point)
+
+
+for key in point:
+    print(key, point[key])
+
+for key, value in point.items():
+    print(key, value)
+
+
+# %%
+
+
+# Dictionary Comprehension
+
+# inefficient way
+values = []
+for x in range(5):
+    values.append(x * 2)
+print(values)
+
+# more efficient way
+list_values = [x * 2 for x in range(5)]
+print(list_values)
+
+
+# This can be used for sets and dictionaries, too.
+
+dict_values = {x: x**2 for x in range(101)}
+print(dict_values)
+
+
+set_values = (x**2 for x in range(101))
+print(set_values)
+# %%
+
+# Generator Expressions
+
+from sys import getsizeof
+
+list_values = [x * 2 for x in range(5000)]
+print(list_values)
+print(getsizeof(list_values))
+
+set_values = (x**2 for x in range(5000))
+print(set_values)
+print(getsizeof(set_values))
+
+# %%
+
+
+# Unpacking Operator
+
+# By just adding an asterisk before the argument,
+# we can print single items individually
+
+numbers = [1, 2, 3]
+print(numbers, sep="23", end="43")
+print(*numbers)
+print(numbers)
+print(*numbers)
+print(1, 2, 3)
+
+
+values = list(range(5))
+print(*values)
+
+values = [*range(5)]
+print(values)
+
+values = [range(5)]
+print(values)
+
+values = [*range(5), *"Hello World"]
+print(values)
+
+# We can use one asterisk to unpack lists,
+# We can use two asterisks to unpack dictionaries,
+
+# %%
+
+
+# QUIZ TIME
+from pprint import pprint
+
+sentence = "this might be the last time I'm going to play with myself."
+
+counter = {}
+
+for letter in sentence:
+    if letter in counter:
+        counter[letter] += 1
+
+    else:
+        counter[letter] = 1
+
+char_freq_sorted = sorted(counter.items(), key=lambda kv: kv[1], reverse=True)
+
+print(char_freq_sorted[1])
+
+# %%
