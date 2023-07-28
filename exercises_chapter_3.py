@@ -566,8 +566,6 @@ print(add)
 
 
 # %%
-
-
 """Python is the best."""
 
 
@@ -859,3 +857,80 @@ if not queue:
 # %%
 
 # Tuples
+# A read only list (Can't be modified)
+
+point = (1, 2)
+three_points = (1, 2) + (3, 5)
+
+print(point)
+print(three_points)
+print(three_points[1:2])
+
+w, x, y, z = three_points
+print(y)
+print(w)
+
+if 10 in point:
+    print("exists")
+# %%
+
+# Swapping Variables
+
+
+x = 10
+y = 11
+
+print(x, y)
+
+
+z = x
+x = y
+y = z
+
+print(x, y)
+
+
+x, y = y, x
+
+print(x, y)
+
+
+# %%
+
+
+# Arrays
+from array import array
+
+
+numbers = array("i", [1, 2, 3, 4, 5, 6])
+print(numbers[0])
+
+print(numbers)
+
+# %%
+
+# Sets
+
+
+numebrs = [1, 3, 4, 5, 2, 1, 2, 4, 5, 7, 7]
+first = set(numbers)
+print("first:", first)
+
+second = {1, 4}
+second.add(56)
+second.remove(1)
+print("second:", second)
+
+
+uni = first | second
+print("unison:", uni)
+
+intersect = first & second
+print("intersection:", intersect)
+
+print("only in first:", first - second)
+print("only in second:", second - first)
+print("unique items in each set:", first ^ second)
+
+
+# %%
