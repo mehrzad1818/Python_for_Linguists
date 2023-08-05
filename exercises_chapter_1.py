@@ -124,5 +124,3 @@ print(round(43.250, 1))
 #    memory compared to "h".
 
 # e: It's wrong, since assignment takes place on the right side of the equal sign.
-
-# %%
