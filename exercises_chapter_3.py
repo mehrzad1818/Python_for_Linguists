@@ -639,7 +639,6 @@ words = ['missile','racism','music']
 
 for pre in prefix:
     for word in words:
-        print(word)
         worded = ((pre+"-") * 3) + word
         print(worded)
 
@@ -653,8 +652,24 @@ for pre in prefix:
 prefix = ["anti", "pro", "con"]
 words = ['missile','racism','music']
 
-for pre in prefix:
+for pre1 in prefix:
+    for pre2 in prefix:
+        for pre3 in prefix:
+            for word in words:
+                print(pre1, pre2, pre3, word, sep="-")
+
+
+# %%
+import itertools
+
+prefix = ["anti", "pro", "con"]
+words = ['missile', 'racism', 'music']
+
+combinations = list(itertools.product(prefix, repeat=6))
+
+for combination in combinations:
     for word in words:
-        print(word)
-        worded = ((pre+"-") * 3) + word
-        print(worded)
+        print('-'.join(combination), word)
+# %%
+
+
