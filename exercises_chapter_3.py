@@ -569,7 +569,7 @@ print(add)
 # This method shows how we can easily  skip instances where coda and onset are the same.
 
 vowels = "aeiou"
-consonants = "ptkbdg"
+consonants = "qwrtypasdfghjklzxcvbnm"
 add = 0
 
 
@@ -581,5 +581,32 @@ for v in vowels:
             print(o, v, c, sep="")
             add += 1
 print(add)
+
+# %%
+
+# SVO (Subject, Object, Verb) sentence generator
+
+nouns = "amo sandali sher khali seda"
+verbs = "ast gerefte_ast naabod_shod dastam_khord raft aamad"
+
+for s in nouns.split():
+    for v in verbs.split():
+        for o in nouns.split():
+            print(s, v, o)
+
+# %%
+
+
+nouns = "amo sandali sher khali seda"
+verbs = "ast gerefte_ast naabod_shod dastam_khord raft aamad"
+trans = "ast gerefte_ast aamad"
+
+for s in nouns.split():
+    for v in verbs.split():
+        if v in trans:
+            print(s, v)
+        else:
+            for o in nouns:
+                print(s, v, o)
 
 # %%
