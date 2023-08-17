@@ -610,3 +610,51 @@ for s in nouns.split():
                 print(s, v, o)
 
 # %%
+
+
+# Exercises of Chapter 3
+
+
+# %%
+# 3.1
+
+# 3.1 Why does this fail?
+
+
+if 2 + 2 == 5:
+    print("that shouldn't happen")
+        print("or this....")
+
+# not only the answer is wrong (it returns False and the sequence is not executed at all)
+# There's also a problem with indentation, and also putting a single quote in a single quote print statement
+# %%
+
+# 3.2 Augment the recursive prefixation example on page 38
+#  to handle three distinct prefixes. 
+# Assume that only identical prefixes can cooccur. 
+
+
+prefix = ["anti", "pro", "con"]
+words = ['missile','racism','music']
+
+for pre in prefix:
+    for word in words:
+        print(word)
+        worded = ((pre+"-") * 3) + word
+        print(worded)
+
+# %%
+
+
+# 3.3 Augment the recursive pre fixation example above to 
+# handle three distinct prefixes. Assume that all prefixes
+#  can cooccur and any word can have up to three prefixes. 
+
+prefix = ["anti", "pro", "con"]
+words = ['missile','racism','music']
+
+for pre in prefix:
+    for word in words:
+        print(word)
+        worded = ((pre+"-") * 3) + word
+        print(worded)
