@@ -630,8 +630,8 @@ if 2 + 2 == 5:
 # %%
 
 # 3.2 Augment the recursive prefixation example on page 38
-#  to handle three distinct prefixes. 
-# Assume that only identical prefixes can cooccur. 
+#  to handle three distinct prefixes.
+# Assume that only identical prefixes can cooccur.
 
 
 prefix = ["anti", "pro", "con"]
@@ -645,9 +645,10 @@ for pre in prefix:
 # %%
 
 
-# 3.3 Augment the recursive pre fixation example above to 
+# 3.3
+# Augment the recursive pre fixation example above to
 # handle three distinct prefixes. Assume that all prefixes
-#  can cooccur and any word can have up to three prefixes. 
+#  can cooccur and any word can have up to three prefixes.
 
 prefix = ["anti", "pro", "con"]
 words = ['missile','racism','music']
@@ -672,4 +673,91 @@ for combination in combinations:
         print('-'.join(combination), word)
 # %%
 
+# 3.4 What’s wrong with the following code snippet?
 
+count = 0
+while count < 3:
+    print(count)
+    count -= 1
+
+# The code creates an infinite loop, which makes
+# the counter start from zero and count backward.
+
+# %%
+
+
+word = 'Israel'
+count = 0
+
+while count < len(word):
+
+    print(word[count])
+    count += 1
+    othercount = 1
+
+    while othercount < count+1:
+
+        print('\t',word[0:othercount])
+        othercount += 1
+        otherothercount = 1
+
+        while otherothercount < othercount+1:
+
+            print('\t', "\t",word[0:otherothercount])
+            otherothercount += 1
+
+
+# %%
+
+# 3.6 Why does the following code fail?
+
+word = 'alphabet'
+vowels = 'aeiou'
+count = 0
+
+while count < len(word):
+    letter = word[count]
+
+    if letter not in vowels:
+        print(letter)
+        count += 1
+
+# because it doesn't make it past the second if statement
+# to add to count so that it can break over the while loop
+# the solution is the de-indent the last line of code (723)
+# %%
+
+# 3.7 The five code examples on pages 44, 45, 46, 47, and 48
+# involve test- ing letters for whether they are vowel letters.
+# What happens if the word variable has no vowels?
+
+
+vowels = 'aeiou'
+word = 'mnb'
+counter = 0
+
+while counter < len(word):
+    if word[counter] in vowels:
+        break
+    counter += 1
+
+print('The word begins with', counter,'consonant letters')
+
+# %%
+
+# 3.8 The program control41.py on page 52 uses a continue statement.
+# Using a break instead would be wrong; why? 
+
+vowels = 'aeiou'
+consonants = 'ptkbdg'
+
+for v in vowels: 
+    for o in consonants: 
+        for c in consonants:
+            if o == c:
+                continue
+
+            print(o,v,c,sep='')
+
+
+# %%
