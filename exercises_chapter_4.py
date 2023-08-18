@@ -1,4 +1,3 @@
-
 """This file includes exercises from Chapter 4 of Python for Linguists book."""
 # %%
 
@@ -95,3 +94,61 @@ for words in sys.stdin:
 
 
 # %%
+
+
+import sys
+
+
+vowels = "aioue"
+line = 1
+
+for words in sys.stdin:
+    print("This is line", line)
+    line += 1
+
+    for word in words.split():
+        counter = 0
+        vowel_count = 0
+
+        while counter < len(word):
+            if word[counter] in vowels:
+                vowel_count += 1
+            counter += 1
+        else:
+            print("\t There are", vowel_count, " vowels in ", '"', word, '"', sep="")
+
+
+# %%
+
+
+# In this method we can feed several lines of a file into this program
+
+# Use the command line below:
+
+# """
+# type <text file name in .txt format> | python <name of the program in .py>
+# """
+
+
+import sys
+
+
+vowels = "aioue"
+line = 1
+
+for words in sys.stdin:
+    print("This is line", line)
+    line += 1
+
+    for word in words.split():
+        counter = 0
+        vowel_count = 0
+
+        while counter < len(word):
+            if word[counter] in vowels:
+                vowel_count += 1
+            counter += 1
+        else:
+            print("\t There are", vowel_count, " vowels in ", '"', word, '"', sep="")
+
+sys.stdout
