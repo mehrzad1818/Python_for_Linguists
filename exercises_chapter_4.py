@@ -152,3 +152,91 @@ for words in sys.stdin:
             print("\t There are", vowel_count, " vowels in ", '"', word, '"', sep="")
 
 sys.stdout
+
+
+# %%
+
+import random
+
+letters = "abcdefghijklmnopqrstuvwxyz"
+letter = letters[random.randint(0, 25)]
+
+
+while True:
+    guess = input("Type a lower-case letter: ")
+
+    if guess not in letters:
+        print("That's not a lower-case letter.")
+        continue
+    if guess == letter:
+        print("That's right!")
+        break
+    if guess > letter:
+        print("It's earlier in the alphabet.")
+    else:
+        print("It's later in the alphabet.")
+
+
+# %%
+
+# not what we want!
+
+x = "Tom"
+y = "Dick"
+z = "Harry"
+
+result = input("Type x, y, or z: ")
+print(result)
+
+# %%
+
+# set up three variables
+x = "Tom"
+y = "Dick"
+z = "Harry"
+# collect user input
+result = input("Type x, y, or z: ")
+# evaluate and print result
+print(eval(result))
+
+# %%
+
+
+# open file stream
+outFile = open("testfile.txt", mode="w")
+# write to it
+outFile.write("some some some some text!\n")
+outFile.write("...and some some some some some more text!\n")
+outFile.close()  # close file stream
+
+# %%
+
+
+inFile = open("testfile.txt", mode="r")
+stuff = inFile.read()
+inFile.close()
+
+print(stuff)
+
+# %%
+
+# open file
+inFile = open("testfile.txt", "r")
+stuff = inFile.read()  # read file contents
+inFile.close()  # close file
+lines = stuff.split("\n")  # split into lines
+# print lines and lengths
+for line in lines:
+    print(len(line), ": ", line, sep="")
+
+# %%
+
+# open file
+inFile = open("testfile.txt", "r")
+# read from stream line by line
+for line in inFile:
+    # print length of line and the line
+    print(len(line), ": ", line, sep="", end="")
+inFile.close()  # close file stream
+
+# %%
