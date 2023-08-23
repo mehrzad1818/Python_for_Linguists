@@ -240,3 +240,203 @@ for line in inFile:
 inFile.close()  # close file stream
 
 # %%
+
+# This is a sample of importing and visualizing data from a file:
+
+# import from scipy and matplotlib
+import scipy.io.wavfile, matplotlib.pyplot
+
+# read sample rate and wave vector from file
+x, y = scipy.io.wavfile.read("mha.wav")
+vdur = len(y) / x  # calculate duration #print duration
+print("Duration of wave:", vdur)
+matplotlib.pyplot.plot(y)  # make plot
+matplotlib.pyplot.show()  # show plot
+
+# %%
+
+
+# This is an example of visualizing Excel data.
+
+import openpyxl  # to handle xls/xlsx files
+
+# read in data
+wb = openpyxl.load_workbook("Classmates intel.xlsx", read_only=True)
+# get the names of 'sheets'
+print(wb.get_sheet_names())
+# get the first sheet
+sheet = wb["Classmates"]
+# print contents of cell B2 on sheet1
+print(sheet["B2"].value)
+r = 0  # keep track of rows #go through all rows
+for c in sheet.rows:
+    print(r)  # print the row number #print cells in each row
+    for i in range(len(c)):
+        print("\t", c[i].value)
+    r += 1
+
+# %%
+
+# App to do lexical statistics
+
+
+count = 0  # counter for lines
+f = open("bible.txt", "r", encoding="utf8")  # open the file
+for line in f:  # read line by line
+    count += 1
+f.close()  # close file
+print("lines:", count)  # print line count
+
+
+# %%
+# Save and store the contents of the bible
+
+f = open("bible.txt", "r", encoding="utf8")
+
+for line in f:
+    count += 1
+    lines.append(line)
+
+f.close()
+
+print("lines:", count)
+print("saved lines:", len(lines))
+
+# %%
+
+
+count = 0
+lines = []
+
+f = open("bible.txt", "r", encoding="utf8")
+
+for line in f:
+    count += 1
+    lines.append(line)
+
+f.close()
+
+i = 5000
+while i < 6000:
+    print(lines[i], end="")
+    i += 1
+
+print("lines:", count)
+print("saved lines:", len(lines))
+
+# %%
+
+
+words = []  # list of all words
+lines = []  # list of all lines
+# open file
+f = open("bible.txt", "r", encoding="utf8")
+
+
+for line in f:  # save lines one by one
+    lines.append(line)
+f.close()  # close file
+
+
+# go through lines one by one
+for line in lines:
+    # break each line into words
+    wds = line.split()
+    # add words to list
+    words += wds
+
+i = 50000
+while i < 70000:
+    # store the count for the current word
+    count = 0
+    # convert the current word to lowercase
+    word = words[i].lower()
+    # go through word letter by letter #if lowercase, add 1 to count
+    for l in word:
+        if l in "abcdefghijklmnopqrstuvwxyz":
+            count += 1
+    print(i, words[i], count)  # print it all
+    i += 1
+# %%
+
+
+words = []  # list of all words
+lines = []  # list of all lines
+wordlengths = {}  # dictionary of word lengths
+
+# open file
+f = open("bible.txt", "r", encoding="utf8")
+for line in f:  # save lines one by one
+    lines.append(line)
+f.close()  # close file
+
+
+# go through the lines one by one
+for line in lines:
+    # break each line into words
+    wds = line.split()
+    # add the words to the list
+    words += wds
+
+
+for wd in words:
+    count = 0  # count for current word #convert current word to lowercase
+    word = wd.lower()
+    # go through word letter by letter #if lowercase, add 1 to count
+    for l in word:
+        if l in "abcdefghijklmnopqrstuvwxyz":
+            count += 1
+
+    # check if we've seen this length before
+    if count in wordlengths:
+        # if so add 1
+        wordlengths[count] += 1
+    else:
+        # if not, set to 1
+        wordlengths[count] = 1
+
+
+# print out counts for each word length
+for k, v in wordlengths.items():
+    print(k, v)
+
+# %%
+
+
+the_book = open("romeo.txt", mode="r", encoding="utf8")
+
+the_book_lines = []
+
+for each_line in the_book:
+    the_book_lines.append(each_line)
+
+the_book.close()
+
+refined_the_book_lines = []
+
+for this in the_book_lines:
+    if this == "\n":
+        continue
+    refined_the_book_lines.append(this)
+    # print(this, end="")
+
+
+the_book_words = []
+
+for words in refined_the_book_lines:
+    words.split()
+    the_book_words += words
+
+print(the_book_words)
+
+diction_book = {}
+
+for word in the_book_words:
+    if word in diction_book:
+        diction_book[word] += 1
+    else:
+        diction_book[word] = 1
+
+print(diction_book)
+
+# %%
