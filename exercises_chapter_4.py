@@ -514,7 +514,7 @@ my_dict = {"vowel": 0, "consonant": 0, "uppercase": 0, "lowercase": 0}
 for word in my_text.split():
     for letter in word:
 
-        
+
         if letter.isalpha():
 
 
@@ -530,3 +530,18 @@ for word in my_text.split():
 
 print(my_dict)
 # %%
+
+
+# 4.7 Write a program that takes a simple mathematical expression 
+# on the command line like '7 / 45', parses it correctly, and prints the result. 
+
+
+calculation = input("Enter a simple mathematical expression: ")
+
+
+
+summation = 0
+
+
+
+
