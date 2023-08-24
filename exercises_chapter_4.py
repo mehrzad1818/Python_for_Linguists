@@ -440,4 +440,93 @@ for word in the_book_words:
 print(diction_book)
 
 # %%
-12
+
+
+# Exercise 4.1
+# 4.1 Tweak the io3.py program to accommodate uppercase vowels. 
+
+import sys #make sys.argv available
+vowels = 'aeiou' #define vowels
+
+#iterate over all words in list
+for word in sys.argv[1:]:
+    counter = 0 #proceed as before
+    vowelcount = 0
+
+    while counter < len(word): 
+        if word[counter] in vowels:
+            if word[counter] in "ABCDEFGHIJKLMNOPQRSTUWXYZ":
+                vowelcount += 1 
+            counter += 1
+    else:
+        print('There are',vowelcount,
+    'vowels in',word)
+
+# %%
+
+# 4.1 Consonant and Vowel counter
+
+my_text = input("Paste a text here: ")
+
+vowels = "aioueAIOUE"
+consonants = "qwrtypsdfghjklzxcvbnmQWRTYPSDFGHJKLZXCVBNM"
+my_dict = {}
+my_paradigms = ["vowel", "consonant", "uppercase", "lowercase"]
+
+for paradigm in my_paradigms:
+    my_dict[paradigm] = 0
+
+
+for word in my_text.split():
+    for letter in word:
+
+        if letter.isalpha():
+
+            if letter in vowels and letter.isupper():
+                my_dict["vowel"] += 1
+                my_dict["uppercase"] += 1
+     
+            if letter in vowels and letter.islower():
+                my_dict["vowel"] += 1
+                my_dict["lowercase"] += 1
+
+
+            if letter in consonants and letter.isupper():
+                my_dict["consonant"] += 1
+                my_dict["uppercase"] += 1
+      
+            if letter in consonants and letter.islower():
+                my_dict["consonant"] += 1
+                my_dict["lowercase"] += 1
+
+
+print(my_dict)
+
+# %%
+
+
+my_text = input("Paste a text here: ")
+
+vowels = "aioueAIOUE"
+consonants = "qwrtypsdfghjklzxcvbnmQWRTYPSDFGHJKLZXCVBNM"
+my_dict = {"vowel": 0, "consonant": 0, "uppercase": 0, "lowercase": 0}
+
+for word in my_text.split():
+    for letter in word:
+
+        
+        if letter.isalpha():
+
+
+            if letter in vowels:
+                my_dict["vowel"] += 1
+            else:
+                my_dict["consonant"] += 1
+
+            if letter.isupper():
+                my_dict["uppercase"] += 1
+            else:
+                my_dict["lowercase"] += 1
+
+print(my_dict)
+# %%
