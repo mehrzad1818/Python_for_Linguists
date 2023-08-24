@@ -566,8 +566,33 @@ for line in lines:
     for wh_words in wh_questions:
         if wh_words in line:
             # print(line)
-            count += 1
+            count_words += 1
 
 print(count_words)
 print(count_lines)
+# %%
+
+# 4.9 Write a program that:
+# (a) Reads in the Alice file;
+# (b) strips off the header;
+# (c) converts everything to lowercase;
+# (d) converts all punctuation to spaces;
+# (e) splits the text into words;
+# (f) counts up how frequent all words are;
+# (g) prints out the 10 most frequent words and their counts.
+
+
+lines_of_bible = []
+
+
+opened_book = open("bible.txt", mode="r", encoding="utf8")
+for each_line in opened_book:
+    lines_of_bible.append(each_line)
+opened_book.close()
+
+
+for line in lines_of_bible:
+    for word in line:
+        print(word)
+
 # %%
