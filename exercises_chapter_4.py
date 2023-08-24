@@ -443,24 +443,24 @@ print(diction_book)
 
 
 # Exercise 4.1
-# 4.1 Tweak the io3.py program to accommodate uppercase vowels. 
+# 4.1 Tweak the io3.py program to accommodate uppercase vowels.
 
-import sys #make sys.argv available
-vowels = 'aeiou' #define vowels
+import sys  # make sys.argv available
 
-#iterate over all words in list
+vowels = "aeiou"  # define vowels
+
+# iterate over all words in list
 for word in sys.argv[1:]:
-    counter = 0 #proceed as before
+    counter = 0  # proceed as before
     vowelcount = 0
 
-    while counter < len(word): 
+    while counter < len(word):
         if word[counter] in vowels:
             if word[counter] in "ABCDEFGHIJKLMNOPQRSTUWXYZ":
-                vowelcount += 1 
+                vowelcount += 1
             counter += 1
     else:
-        print('There are',vowelcount,
-    'vowels in',word)
+        print("There are", vowelcount, "vowels in", word)
 
 # %%
 
@@ -479,22 +479,19 @@ for paradigm in my_paradigms:
 
 for word in my_text.split():
     for letter in word:
-
         if letter.isalpha():
-
             if letter in vowels and letter.isupper():
                 my_dict["vowel"] += 1
                 my_dict["uppercase"] += 1
-     
+
             if letter in vowels and letter.islower():
                 my_dict["vowel"] += 1
                 my_dict["lowercase"] += 1
 
-
             if letter in consonants and letter.isupper():
                 my_dict["consonant"] += 1
                 my_dict["uppercase"] += 1
-      
+
             if letter in consonants and letter.islower():
                 my_dict["consonant"] += 1
                 my_dict["lowercase"] += 1
@@ -513,11 +510,7 @@ my_dict = {"vowel": 0, "consonant": 0, "uppercase": 0, "lowercase": 0}
 
 for word in my_text.split():
     for letter in word:
-
-
         if letter.isalpha():
-
-
             if letter in vowels:
                 my_dict["vowel"] += 1
             else:
@@ -532,16 +525,49 @@ print(my_dict)
 # %%
 
 
-# 4.7 Write a program that takes a simple mathematical expression 
-# on the command line like '7 / 45', parses it correctly, and prints the result. 
+# 4.7 Write a program that takes a simple mathematical expression
+# on the command line like '7 / 45', parses it correctly, and prints the result.
 
 
-calculation = input("Enter a simple mathematical expression: ")
+# %%
+
+# 4.8 Write a program that goes through the Alice text and prints out all multiple
+#  wh- questions. We define these as questions that begin with a wh- word
+#  and contain at least one more wh- word in the question.
+# (If you already know what they are, you may not use regular expressions.)
 
 
+lines = []
 
-summation = 0
+f = open("bible.txt", "r", encoding="utf8")
+for line in f:
+    lines.append(line)
+f.close()
+
+wh_questions = [
+    "what",
+    "where",
+    "why",
+    "when",
+    "which",
+    "whose",
+    "whom",
+    "who",
+    "how",
+]
 
 
+count_words = 0
+count_lines = 0
 
+for line in lines:
+    count_lines += 1
 
+    for wh_words in wh_questions:
+        if wh_words in line:
+            # print(line)
+            count += 1
+
+print(count_words)
+print(count_lines)
+# %%
