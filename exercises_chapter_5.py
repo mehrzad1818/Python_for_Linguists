@@ -61,3 +61,18 @@ print("a =", a)  # print the 3 values
 print("b =", b)
 print("c =", c)
 # %%
+
+# Functions that take arguments:
+
+
+def myfunc(a, b):
+    # return the concatenation #OR addition of those values
+    return a + b
+
+
+# invoke the function with numbers
+print(myfunc(45, 10))
+# invoke the function with strings
+print(myfunc("strings ", "too"))
+
+# %%
