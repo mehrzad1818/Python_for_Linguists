@@ -76,3 +76,80 @@ print(myfunc(45, 10))
 print(myfunc("strings ", "too"))
 
 # %%
+
+x = "a value"
+
+
+def anotherfunc(a):
+    a = "another value!"
+    return a
+
+
+print(x)
+print(anotherfunc(x))
+print(x)
+
+# %%
+
+
+x = [4, 5, 6]
+
+
+def anotherfunc(a):
+    a.append(7)
+
+    return a
+
+
+print(x)
+print(anotherfunc(x))
+print(x)
+
+# %%
+
+
+# function with default for 2nd arg
+def f(x, y="oops"):
+    return x + " " + y
+
+
+print(f("hat"))  # invoked 3 ways
+print(f(x="chair"))
+print(f("hat", "chair"))
+print(f(y="this", x="those"))
+
+# %%
+
+
+# function with unspecified #number of unnamed and named arguments
+def func(*args, **kwargs):
+    """This function takes unspecified number of unnamed arguments as a list in args
+    and also takes unspecified number of named arguments as a dictionary in kwargs."""
+
+    for a in args:  # print unnamed args
+        print(a)
+
+    for k in kwargs:  # print named args
+        print(k, "\t", kwargs[k])
+
+    # for k, kwargs in kwargs.items():  # print named args
+    #     print(k, "\t", kwargs)
+
+
+# invoked with unnamed FOLLOWED by #named arguments
+func(3, 6, 8, hat="wow", chair=3.5, lamp="dark")
+
+# %%
+
+
+# Recursive and Lambda Functions
+
+
+# function with 2 args: # a function f # and something else x
+def func(f, x):
+    return f(x)
+
+
+print(func(len, "hat"))  # invoking it
+
+# %%
